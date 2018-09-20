@@ -7,8 +7,16 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Default",
       "program": "${workspaceFolder}\\server.js"
+    },
+    {
+      "name": "Nodemon",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/nodemon/bin/nodemon.js",
+      "args": ["${workspaceRoot}/server.js"],
+      "runtimeArgs": ["--nolazy"]
     }
   ]
 }

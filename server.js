@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-const path = require('path');
+// const path = require('path');
 
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
@@ -19,21 +19,18 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+	.connect(db, { useNewUrlParser: true })
+	.then(() => console.log('MongoDB Connected'))
+	.catch(err => console.log(err));
 
 // Passport
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
-// Serve index
-app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname, 'index.html'));
-});
+// // Serve index
+// app.get('/', (req, res) => {
+//   res.status(200).sendFile(path.join(__dirname, 'index.html'));
+// });
 
 // Use routes
 app.use('/api/users', users);
