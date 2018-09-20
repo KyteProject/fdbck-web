@@ -1,63 +1,64 @@
 module.exports = {
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaVersion": 7,
-    "sourceType": "script",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "rules": {
-    "global-require": "off",
-    "import/no-dynamic-require": "off",
-    "no-console": "off",
-    "no-param-reassign": "off",
-    "indent": [
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 7,
+		"sourceType": "script",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"global-require": "warn",
+		"import/no-dynamic-require": "off",
+		"no-console": "off",
+		"no-param-reassign": "off",
+		"no-undef": "off",
+		"indent": [
       "error",
-      2,
-      {
-        "SwitchCase": 1
+      "tab",
+			{
+				"SwitchCase": 1
       }
     ],
-    "linebreak-style": [
+		"linebreak-style": [
       "error",
       "unix"
     ],
-    "quotes": [
+		"quotes": [
       "warn",
       "single"
     ],
-    "semi": [
+		"semi": [
       "warn",
       "always"
     ],
-    "keyword-spacing": [
+		"keyword-spacing": [
       "error", {
-        "before": true,
-        "after": true
+				"before": true,
+				"after": true
       }
     ],
-    "space-before-blocks": [
+		"space-before-blocks": [
       "error", {
-        "functions": "always",
-        "keywords": "always",
-        "classes": "always"
+				"functions": "always",
+				"keywords": "always",
+				"classes": "always"
       }
     ],
-    "space-before-function-paren": [
+		"space-before-function-paren": [
       "error", {
-        "anonymous": "never",
-        "named": "never",
-        "asyncArrow": "always"
+				"anonymous": "never",
+				"named": "never",
+				"asyncArrow": "always"
       }
     ],
-    "prefer-const": [
+		"prefer-const": [
       "error", {
-        "destructuring": "all",
-        "ignoreReadBeforeAssign": false
+				"destructuring": "all",
+				"ignoreReadBeforeAssign": false
       }
     ],
-  }
+	}
 };
 
 // "extends": "eslint:recommended",

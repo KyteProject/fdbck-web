@@ -8,11 +8,9 @@ const profileSchema = new Schema({
 	},
 	forename: {
 		type: String,
-		required: true
 	},
 	surname: {
 		type: String,
-		required: true
 	},
 	bio: {
 		type: String,

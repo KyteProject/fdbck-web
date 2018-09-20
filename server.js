@@ -13,26 +13,17 @@ const app = express();
 const port = process.env.PORT || 5000;
 const db = require('./config/keys').mongoURI;
 
-// Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Connect to MongoDB
 mongoose
 	.connect(db, { useNewUrlParser: true })
 	.then(() => console.log('MongoDB Connected'))
 	.catch(err => console.log(err));
 
-// Passport
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
-// // Serve index
-// app.get('/', (req, res) => {
-//   res.status(200).sendFile(path.join(__dirname, 'index.html'));
-// });
-
-// Use routes
 app.use('/api/users', users);
 app.use('/api/profile', profile);
 app.use('/api/posts', posts);

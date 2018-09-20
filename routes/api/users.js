@@ -1,3 +1,6 @@
+// TODO: Login by username
+// TODO: Login by socials, Facebook, Discord?
+
 const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
@@ -17,45 +20,50 @@ const User = require('../../models/User');
 router.post('/register', (req, res) => {
 	const { errors, isValid } = validateRegisterInput(req.body);
 
-	// Check validation
 	if (!isValid) {
 		return res.status(400)
 			.json(errors);
 	}
 
-	User.findOne({ email: req.body.email })
+	User.findOne({ name: req.body.name })
 		.then(user => {
 			if (user) {
-				errors.email = 'Email already exists';
+				errors.name = 'Username already exists';
 				return res.status(400)
 					.json(errors);
 			} else {
-				// Create avatar
-				const avatar = gravatar.url(req.body.email, {
-					s: '200', // size
-					r: 'pg', // rating
-					d: 'mm' // Default
-				});
+				User.findOne({ email: req.body.email })
+					.then(user => {
+						if (user) {
+							errors.email = 'Email already exists';
+							return res.status(400)
+								.json(errors);
+						} else {
+							const avatar = gravatar.url(req.body.email, {
+								s: '200', // size
+								r: 'pg', // rating
+								d: 'mm' // Default
+							});
 
-				// Create new user
-				const newUser = new User({
-					name: req.body.name,
-					email: req.body.email,
-					avatar,
-					password: req.body.password
-				});
+							const newUser = new User({
+								name: req.body.name,
+								email: req.body.email,
+								avatar,
+								password: req.body.password
+							});
 
-				// encrypt password
-				bcrypt.genSalt(10, (err, salt) => {
-					bcrypt.hash(newUser.password, salt, (err, hash) => {
-						if (err) throw err;
-						newUser.password = hash;
-						newUser
-							.save()
-							.then(user => res.json(user))
-							.catch(err => console.log(err));
+							bcrypt.genSalt(10, (err, salt) => {
+								bcrypt.hash(newUser.password, salt, (err, hash) => {
+									if (err) throw err;
+									newUser.password = hash;
+									newUser
+										.save()
+										.then(user => res.json(user))
+										.catch(err => console.log(err));
+								});
+							});
+						}
 					});
-				});
 			}
 		});
 });
@@ -66,7 +74,6 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res) => {
 	const { errors, isValid } = validateLoginInput(req.body);
 
-	// Check validation
 	if (!isValid) {
 		return res.status(400)
 			.json(errors);
@@ -75,7 +82,6 @@ router.post('/login', (req, res) => {
 	const email = req.body.email;
 	const password = req.body.password;
 
-	// Find user by email
 	User.findOne({ email })
 		.then(user => {
 			if (!user) {
@@ -84,19 +90,16 @@ router.post('/login', (req, res) => {
 					.json(errors);
 			}
 
-			// Check password
 			bcrypt.compare(password, user.password)
 				.then(isMatch => {
 					if (isMatch) {
-						// Create payload
 						const payload = {
 							id: user.id,
 							name: user.name,
 							avatar: user.avatar
 						};
 
-						// Sign token
-						jwt.sign(payload, keys.secret, { expiresIn: 3600 }, (err, token) => {
+						jwt.sign(payload, keys.secret, { expiresIn: 10000 }, (err, token) => {
 							res.json({
 								success: true,
 								token: 'Bearer ' + token
