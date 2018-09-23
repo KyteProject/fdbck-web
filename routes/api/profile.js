@@ -15,20 +15,19 @@ router.get('/', passport.authenticate('jwt', { session: false }), (req, res) => 
 	const errors = {};
 
 	Profile.findOne({ user: req.user.id })
+		.populate('user', ['name', 'avatar'])
 		.then(profile => {
 			if (!profile) {
 				errors.noprofile = 'There is no profile for this user';
-				return res.status(404)
-					.json(errors);
+				return res.status(404).json(errors);
 			}
 			res.json(profile);
 		})
-		.catch(err => res.status(404)
-			.json(err));
+		.catch(err => res.status(404).json(err));
 });
 
 // @route		GET /api/profile/:name
-// @desc		Get user profile by name
+// @desc		Get profile by name
 // @access	Public
 router.get('/user/:name', (req, res) => {
 	const errors = {};
@@ -37,8 +36,7 @@ router.get('/user/:name', (req, res) => {
 		.then(user => {
 			if (!user) {
 				errors.noprofile = 'There is no profile for this user';
-				return res.status(404)
-					.json(errors);
+				return res.status(404).json(errors);
 			}
 
 			Profile.findOne({ user: user._id })
@@ -46,8 +44,7 @@ router.get('/user/:name', (req, res) => {
 				.then(profile => {
 					if (!profile) {
 						errors.noprofile = 'There is no profile for this user';
-						return res.status(404)
-							.json(errors);
+						return res.status(404).json(errors);
 					}
 
 					res.json(profile);
@@ -58,7 +55,7 @@ router.get('/user/:name', (req, res) => {
 });
 
 // @route		GET /api/profile/id/:user_id
-// @desc		Get user profile by ID
+// @desc		Get profile by ID
 // @access	Public
 router.get('/id/:user_id', (req, res) => {
 	const errors = {};
@@ -68,14 +65,12 @@ router.get('/id/:user_id', (req, res) => {
 		.then(profile => {
 			if (!profile) {
 				errors.noprofile = 'There is no profile for this user';
-				return res.status(404)
-					.json(errors);
+				return res.status(404).json(errors);
 			}
 
 			res.json(profile);
 		})
-		.catch(err => res.status(404)
-			.json(err));
+		.catch(err => res.status(404).json(err));
 });
 
 // @route		POST /api/profile
@@ -85,8 +80,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
 	const { errors, isValid } = validateProfileInput(req.body);
 
 	if (!isValid) {
-		return res.status(400)
-			.json(errors);
+		return res.status(400).json(errors);
 	}
 
 	const socialList = ['website', 'soundcloud', 'clyp', 'discord', 'facebook', 'instagram', 'twitter', 'youtube'];
@@ -129,14 +123,12 @@ router.get('/all/', (req, res) => {
 		.then(profiles => {
 			if (!profiles) {
 				errors.noprofile = 'Unable to find any profiles';
-				return res.status(404)
-					.json(errors);
+				return res.status(404).json(errors);
 			}
 
 			res.json(profiles);
 		})
-		.catch(err => res.status(404)
-			.json(err));
+		.catch(err => res.status(404).json(err));
 });
 
 module.exports = router;
