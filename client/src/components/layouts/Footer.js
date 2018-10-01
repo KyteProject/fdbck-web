@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Footer extends Component {
 	render() {
 		return (
-			<div class="card margin-bottom-0">
-				<div class="card-body text-muted text-center">
-					© All rights reserved. FDBCK - The musicians feedback community
+			<div className="card margin-bottom-0 invert">
+				<div className="card-body text-muted text-center">
+					© {new Date().getUTCFullYear()} FDBCK - All rights reserved.
 				</div>
 			</div>
 		);

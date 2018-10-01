@@ -21838,7 +21838,7 @@ div.dt-buttons div.btn.processing:after {
 }
 
 .wizard .anchor li a.done:before {
-    background: linear-gradient(to right, #428c01, #22212f)
+    background: linear-gradient(to right, #428c01, #243342)
 }
 
 .wizard .anchor li a.done.active:before {
@@ -21858,7 +21858,7 @@ div.dt-buttons div.btn.processing:after {
 }
 
 .wizard .anchor li a.selected:after {
-    border-color: #22212f;
+    border-color: #243342;
     background: #2d2c3e;
     content: "\f0da";
     font-family: FontAwesome;
@@ -21869,7 +21869,7 @@ div.dt-buttons div.btn.processing:after {
 }
 
 .wizard .anchor li a.selected:before {
-    background: linear-gradient(to right, #22212f, #d7dde3)
+    background: linear-gradient(to right, #243342, #d7dde3)
 }
 
 .wizard .anchor li a.selected.active:after {
@@ -22690,7 +22690,7 @@ body .fc {
 }
 
 .invert .fc-state-default {
-    background-color: #22212f;
+    background-color: #243342;
     border-color: rgba(0, 0, 0, .2);
     color: #dfdfe9
 }
@@ -24621,7 +24621,7 @@ body.indent.indent--shadowed>.page>.page__content {
 }
 
 .text-secondary {
-    color: #22212f!important
+    color: #243342!important
 }
 
 .text-success {
@@ -25007,7 +25007,7 @@ body.indent.indent--shadowed>.page>.page__content {
 }
 
 .bg-secondary {
-    background-color: #22212f!important;
+    background-color: #243342!important;
     color: #FFF
 }
 
@@ -25725,7 +25725,7 @@ html body>.page {
 }
 
 .page__container {
-    flex: 0 0 auto
+    flex: 0 0 1
 }
 
 .page__header {
@@ -25745,7 +25745,7 @@ html body>.page {
 }
 
 .page--w-container.page--w-header .page__container {
-    margin-top: 60px
+    margin-top: 0px
 }
 
 .page--w-container.page--w-header .page__content.page__content--w-aside-fixed>.page-aside {
@@ -25754,7 +25754,7 @@ html body>.page {
 
 .page--w-container .page__content,
 .page--w-container.page--w-header .page__content.page__content--w-aside-fixed.page-aside-scrolled>.page-aside {
-    padding-top: 0
+    padding-top: 60px
 }
 
 .page--w-fixed-header .page__header {
@@ -27650,7 +27650,7 @@ body .page-loader.fadeOut {
 }
 
 .rw-progress--secondary>div.active:after {
-    background: #22212f
+    background: #243342
 }
 
 .rw-progress--animation>div {
@@ -27746,14 +27746,14 @@ body .page-loader.fadeOut {
 
 .tag {
     display: inline-block;
-    background: #22212f;
+    background: #243342;
     color: #FFF
 }
 
 .tag[href]:hover {
     color: #FFF;
     text-decoration: none;
-    background: #171620;
+    background: #172330;
     transition: all .2s ease-in-out
 }
 
@@ -29888,14 +29888,14 @@ select.form-control-sm {
 }
 
 .list-group .list-group-item.list-group-item-secondary {
-    background: #22212f;
-    border-color: #171620;
+    background: #243342;
+    border-color: #172330;
     color: #FFF
 }
 
 .list-group .list-group-item.list-group-item-secondary.list-group-item-action:focus:not(.disabled),
 .list-group .list-group-item.list-group-item-secondary.list-group-item-action:hover:not(.disabled) {
-    background: #171620
+    background: #172330
 }
 
 .list-group .list-group-item.list-group-item-success {
@@ -29973,7 +29973,7 @@ select.form-control-sm {
 }
 
 .bg-secondary {
-    background: #22212f!important
+    background: #243342!important
 }
 
 .bg-success {
@@ -30009,8 +30009,8 @@ select.form-control-sm {
 }
 
 .btn.btn-primary {
-    border-color: #ff1e1e;
-    background: #ff2d2d;
+    border-color: #cc3333;
+    background: #DF4949;
     color: #FFF
 }
 
@@ -30037,8 +30037,8 @@ select.form-control-sm {
 }
 
 .btn.btn-outline-primary {
-    border-color: #ff1e1e;
-    color: #ff2d2d
+    border-color: #cc3333;
+    color: #DF4949
 }
 
 .btn.btn-outline-primary.active,
@@ -30068,13 +30068,13 @@ select.form-control-sm {
 
 .btn.btn-secondary {
     border-color: #1b1b26;
-    background: #22212f;
+    background: #243342;
     color: #FFF
 }
 
 .btn.btn-secondary:hover {
     border-color: #0a0a0e;
-    background: #171620;
+    background: #172330;
     color: #FFF
 }
 
@@ -30089,14 +30089,14 @@ select.form-control-sm {
 .btn.btn-secondary.focus,
 .btn.btn-secondary:focus {
     border-color: #15141d;
-    background: #1e1d29;
+    background: #08192b;
     color: #FFF;
     box-shadow: none
 }
 
 .btn.btn-outline-secondary {
     border-color: #1b1b26;
-    color: #22212f
+    color: #243342
 }
 
 .btn.btn-outline-secondary.active,
@@ -30104,7 +30104,7 @@ select.form-control-sm {
 .btn.btn-outline-secondary:active:focus,
 .btn.btn-outline-secondary:hover {
     border-color: #1b1b26;
-    background: #22212f;
+    background: #243342;
     color: #FFF
 }
 
@@ -30121,7 +30121,7 @@ select.form-control-sm {
 }
 
 .btn.btn-outline-secondary.disabled:hover {
-    color: #22212f
+    color: #243342
 }
 
 .btn.btn-success {
@@ -30844,7 +30844,7 @@ button.close {
 }
 
 .alert.alert-secondary {
-    background: #22212f;
+    background: #243342;
     color: #FFF
 }
 
@@ -30933,11 +30933,11 @@ button.close {
 
 .badge.badge-secondary {
     background: rgba(34, 33, 47, .1);
-    color: #22212f
+    color: #243342
 }
 
 .badge.badge-secondary:after {
-    background: #22212f
+    background: #243342
 }
 
 .badge.badge-secondary[hover]:hover {
@@ -31147,7 +31147,7 @@ button.close {
 
 .table.table-dark {
     color: #dfdfe9;
-    background-color: #201f2c
+    background-color: #172330
 }
 
 .table.table-dark th {
@@ -31156,7 +31156,7 @@ button.close {
 
 .table .thead-dark th {
     color: #dfdfe9;
-    background-color: #201f2c
+    background-color: #172330
 }
 
 .table .thead-light th {
@@ -31870,7 +31870,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert code {
-    background: #171620
+    background: #172330
 }
 
 .invert .styled-list>li>a {
@@ -31879,7 +31879,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .page .page__container.invert,
 .page .page__header.invert {
-    background: #22212f;
+    background: #243342;
     color: #dfdfe9;
     border-bottom-color: rgba(0, 0, 0, .2)
 }
@@ -31889,26 +31889,26 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .page .page__content .page-aside.invert {
-    background-color: #22212f;
+    background-color: #243342;
     color: #dfdfe9;
     border-right-color: rgba(0, 0, 0, .2)
 }
 
 .page .page__content .page-aside.invert .page-aside-controls {
-    background: #1e1d29;
+    background: #08192b;
     border-top: 1px solid rgba(0, 0, 0, .2)
 }
 
 .page .page__content .page-sidepanel.invert {
-    background: #201f2c;
+    background: #172330;
     color: #dfdfe9;
     border-right-color: rgba(0, 0, 0, .2)
 }
 
 .page .page__content .page-sidepanel.invert>.page-sidepanel__button {
-    background: #201f2c;
+    background: #172330;
     border: 1px solid rgba(0, 0, 0, .2);
-    border-left-color: #201f2c
+    border-left-color: #172330
 }
 
 .page .page__content .page-sidepanel.invert>.page-sidepanel__button div {
@@ -31920,7 +31920,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .page .page__content .important-container.invert {
-    background: #201f2c;
+    background: #172330;
     color: #dfdfe9
 }
 
@@ -31970,7 +31970,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .navigation>ul>li>a {
     background: 0 0;
-    color: #ebebf5
+    color: #F7FBFC
 }
 
 .invert .navigation>ul>li>a:hover {
@@ -31989,12 +31989,12 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .navigation>ul>li.open>a {
     background: rgba(0, 0, 0, .08);
-    color: #ebebf5
+    color: #F7FBFC
 }
 
 .invert .navigation>ul>li ul>li>a {
     background: rgba(0, 0, 0, .05);
-    color: #ebebf5
+    color: #F7FBFC
 }
 
 .invert .navigation>ul>li ul>li>a:hover {
@@ -32023,7 +32023,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert.navigation--minimized .navigation>ul>li ul>li,
 .invert.page-aside--minimized .navigation>ul>li ul>li {
-    background: #22212f
+    background: #243342
 }
 
 .invert .horizontal-navigation>ul .icon {
@@ -32031,7 +32031,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .horizontal-navigation>ul>li>a {
-    color: #ebebf5;
+    color: #F7FBFC;
     background: 0 0
 }
 
@@ -32045,13 +32045,13 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .horizontal-navigation>ul>li ul>li {
-    background: #22212f
+    background: #243342
 }
 
 .invert .horizontal-navigation>ul>li ul>li>a {
     background: rgba(0, 0, 0, .05);
     border-color: rgba(0, 0, 0, .2);
-    color: #ebebf5
+    color: #F7FBFC
 }
 
 .invert .horizontal-navigation>ul>li ul>li>a:hover {
@@ -32060,7 +32060,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .horizontal-navigation>ul li {
-    background: #22212f
+    background: #243342
 }
 
 .invert .horizontal-navigation>ul li>a.no-icon:after {
@@ -32128,7 +32128,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .page-heading {
-    background: #201f2c;
+    background: #172330;
     border-bottom-color: rgba(0, 0, 0, .2)
 }
 
@@ -32143,7 +32143,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .page-heading .breadcrumb {
     border-top: 1px solid rgba(0, 0, 0, .2);
-    background: #1e1d29
+    background: #08192b
 }
 
 .invert .page-heading .breadcrumb .breadcrumb-item.active {
@@ -32160,7 +32160,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .divider:after,
 .invert .divider:before {
-    background: #22212f;
+    background: #243342;
     border: 1px solid rgba(0, 0, 0, .2)
 }
 
@@ -32194,11 +32194,11 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .list-faq .list-faq-item {
-    background: #22212f
+    background: #243342
 }
 
 .invert .list-faq .list-faq-item:hover {
-    background: #1e1d29
+    background: #08192b
 }
 
 .invert .rw-informative-progress>.bar {
@@ -32231,7 +32231,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .timeline__item>.dot:after,
 .invert .timeline__item>.user>img {
-    background: #22212f
+    background: #243342
 }
 
 .invert .timeline__item>.dot.dot-primary:after {
@@ -32255,7 +32255,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .timeline__item>.content {
-    background: #22212f
+    background: #243342
 }
 
 .invert .timeline__item>.content strong {
@@ -32263,7 +32263,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .timeline__more>a {
-    background: #22212f;
+    background: #243342;
     color: #dfdfe9
 }
 
@@ -32274,7 +32274,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .widget.invert {
     border: 0;
-    background: #22212f;
+    background: #243342;
     color: #fefeff
 }
 
@@ -32302,7 +32302,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .widget.invert.widget--button:hover {
-    background: #22212f;
+    background: #243342;
     border: 1px dashed #dfdfe9
 }
 
@@ -32312,7 +32312,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .informer.invert {
     border: 0;
-    background: #22212f;
+    background: #243342;
     color: #dfdfe9
 }
 
@@ -32338,7 +32338,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .widget.widget--button:hover {
-    background: #22212f;
+    background: #243342;
     border: 1px dashed #dfdfe9
 }
 
@@ -32348,7 +32348,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .widget--invert-by-parent {
     border: 0;
-    background: #22212f;
+    background: #243342;
     color: #fefeff
 }
 
@@ -32376,7 +32376,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .widget--invert-by-parent.widget--button:hover {
-    background: #22212f;
+    background: #243342;
     border: 1px dashed #dfdfe9
 }
 
@@ -32396,11 +32396,11 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .user>.user__button {
     color: #dfdfe9;
-    background: #22212f
+    background: #243342
 }
 
 .invert .user>.user__button:hover {
-    background: #1e1d29;
+    background: #08192b;
     color: #d0d0df
 }
 
@@ -32409,7 +32409,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .user-group.user-group--bordered .user img {
-    box-shadow: 0 0 0 2px #22212f
+    box-shadow: 0 0 0 2px #243342
 }
 
 .invert .navigation .user--w-lineunder .user__lineunder {
@@ -32450,12 +32450,12 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .rw-accordion__item {
-    background: #22212f
+    background: #243342
 }
 
 .invert .color_example,
 .invert .typography_example {
-    background: #201f2c;
+    background: #172330;
     border-color: rgba(0, 0, 0, .2)
 }
 
@@ -32483,7 +32483,7 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .form-control {
     border-color: rgba(0, 0, 0, .1);
     background: rgba(0, 0, 0, .3);
-    color: #dfdfe9
+    color: #F7FBFC
 }
 
 .invert .form-control:focus {
@@ -32526,7 +32526,7 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .list-group .list-group-item {
     color: #dfdfe9;
     border-color: rgba(0, 0, 0, .2);
-    background: #22212f
+    background: #243342
 }
 
 .invert .list-group .list-group-item.disabled,
@@ -32540,7 +32540,7 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .list-group .list-group-item.list-group-item-action:focus,
 .invert .list-group .list-group-item.list-group-item-action:hover {
-    background: #171620
+    background: #172330
 }
 
 .invert .list-group .list-group-item.list-group-item-action.active {
@@ -32554,13 +32554,13 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .btn.btn-warning {
     border-color: #fece00;
-    background: #22212f;
+    background: #243342;
     color: #fece00
 }
 
 .invert .btn.btn-warning:hover {
     border-color: #d5ad00;
-    background: #171620;
+    background: #172330;
     color: #fece00
 }
 
@@ -32575,7 +32575,7 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .btn.btn-warning.focus,
 .invert .btn.btn-warning:focus {
     border-color: #efc200;
-    background: #1e1d29;
+    background: #08192b;
     color: #fece00;
     box-shadow: none
 }
@@ -32590,7 +32590,7 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .btn.btn-outline-warning:active:focus,
 .invert .btn.btn-outline-warning:hover {
     border-color: #fece00;
-    background: #22212f;
+    background: #243342;
     color: #fece00
 }
 
@@ -32612,13 +32612,13 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .invert .btn.btn-light {
     border-color: rgba(0, 0, 0, .2);
-    background: #22212f;
+    background: #243342;
     color: #fff
 }
 
 .invert .btn.btn-light:hover {
     border-color: rgba(0, 0, 0, .2);
-    background: #171620;
+    background: #172330;
     color: #fff
 }
 
@@ -32633,7 +32633,7 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .btn.btn-light.focus,
 .invert .btn.btn-light:focus {
     border-color: rgba(0, 0, 0, .2);
-    background: #1e1d29;
+    background: #08192b;
     color: #fff;
     box-shadow: none
 }
@@ -32648,7 +32648,7 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .btn.btn-outline-light:active:focus,
 .invert .btn.btn-outline-light:hover {
     border-color: rgba(0, 0, 0, .2);
-    background: #22212f;
+    background: #243342;
     color: #fff
 }
 
@@ -32674,12 +32674,12 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .modal-content.invert {
-    background: #22212f;
+    background: #243342;
     color: #dfdfe9
 }
 
 .card.invert {
-    background: #201f2c
+    background: #172330
 }
 
 .card.invert .card-header {
@@ -32700,7 +32700,7 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .card.invert.card-inner-container--up .card-inner-container {
-    background: #201f2c
+    background: #172330
 }
 
 .card.invert .nav-tabs .nav-link {
@@ -32714,9 +32714,9 @@ body[dir=rtl] .rw-accordion__pointer {
 
 .card.invert .nav-tabs .nav-link.active {
     color: #dfdfe9;
-    background: #201f2c;
+    background: #172330;
     border-color: rgba(0, 0, 0, .1);
-    border-bottom-color: #201f2c
+    border-bottom-color: #172330
 }
 
 .invert .dropdown-menu,
@@ -32755,12 +32755,12 @@ body[dir=rtl] .rw-accordion__pointer {
 }
 
 .invert .dropdown-menu .dropdown-item.active {
-    background: #171620
+    background: #172330
 }
 
 .invert .table {
     color: #dfdfe9;
-    background-color: #201f2c
+    background-color: #172330
 }
 
 .invert .table td,
@@ -32848,11 +32848,11 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .pagination .page-item .page-link {
     color: #dfdfe9;
     border-color: rgba(0, 0, 0, .2);
-    background: #22212f
+    background: #243342
 }
 
 .invert .pagination .page-item .page-link:hover {
-    background: #171620
+    background: #172330
 }
 
 .invert .pagination .page-item.disabled .page-link {
@@ -32887,4 +32887,24 @@ body[dir=rtl] .rw-accordion__pointer {
 .invert .select2-dropdown {
     border-color: rgba(0, 0, 0, .1);
     background: rgba(0, 0, 0, .3)
+}
+
+.page__container>.box {
+    flex: 0 0 auto;
+}
+
+.page__container>.box:last-child {
+    padding-right: 10px
+}
+
+.page__container>.box-fluid {
+    flex: 1;
+    padding: 0
+}
+.dropdown>.trans-style {
+    position: absolute;
+    will-change: transform;
+    top: 0px;
+    left: 0px;
+    transform: translate3d(-250px, 40px, 0px)
 }
