@@ -25039,6 +25039,10 @@ body.indent.indent--shadowed>.page>.page__content {
     background: #ff3d9f!important
 }
 
+.bg-white {
+    background-color: #fff!important;
+}
+
 .bg-gradient-1 {
     background: linear-gradient(-225deg, #473B7B 0, #3584A7 51%, #30D2BE 100%)!important
 }
