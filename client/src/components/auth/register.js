@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-class Register extends Component {
+export default class Register extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -11,6 +12,29 @@ class Register extends Component {
 			password2: '',
 			errors: {},
 		};
+
+		this.onChange = this.onChange.bind(this);
+		this.onSubmit = this.onSubmit.bind(this);
+	}
+
+	onChange(event) {
+		this.setState({ [event.target.name]: event.target.value });
+	}
+
+	onSubmit(event) {
+		event.preventDefault();
+
+		const newUser = {
+			name: this.state.name,
+			email: this.state.email,
+			password: this.state.password,
+			password2: this.state.password2,
+		};
+
+		axios
+			.post('/api/users/register', newUser)
+			.then(res => console.log(res.data))
+			.catch(err => this.setState({ errors: err.response.data }));
 	}
 
 	render() {
@@ -38,14 +62,16 @@ class Register extends Component {
 						The musicians feedback community
 					</p>
 
-					<form action="index.html" method="post">
+					<form onSubmit={this.onSubmit}>
 						<div className="form-group">
 							<label>Email</label>
 							<input
 								type="text"
 								className="form-control"
-								placeholder="Your personal email"
+								placeholder="Your email address"
 								name="email"
+								value={this.state.email}
+								onChange={this.onChange}
 							/>
 						</div>
 						<div className="form-group">
@@ -54,18 +80,34 @@ class Register extends Component {
 								type="text"
 								className="form-control"
 								placeholder="Your username"
-								name="username"
+								name="name"
+								value={this.state.name}
 								autoComplete="username"
+								onChange={this.onChange}
 							/>
 						</div>
-						<div className="form-group margin-bottom-20">
+						<div className="form-group">
 							<label>Password</label>
 							<input
 								type="password"
 								className="form-control"
 								placeholder="Your password"
 								name="password"
+								value={this.state.password}
 								autoComplete="new-password"
+								onChange={this.onChange}
+							/>
+						</div>
+						<div className="form-group margin-bottom-20">
+							<label>Confirm Password</label>
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Enter password again"
+								name="password2"
+								autoComplete=""
+								value={this.state.password2}
+								onChange={this.onChange}
 							/>
 						</div>
 						<div className="form-group margin-bottom-30">
@@ -99,5 +141,3 @@ class Register extends Component {
 		);
 	}
 }
-
-export default Register;

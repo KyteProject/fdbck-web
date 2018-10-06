@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/layouts/Header';
 import Footer from './components/layouts/Footer';
 import Landing from './components/layouts/Landing';
-class App extends Component {
+export default class App extends Component {
 	render() {
 		return (
 			<Router>
@@ -19,5 +19,3 @@ class App extends Component {
 		);
 	}
 }
-
-export default App;

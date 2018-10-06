@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Navbar extends Component {
+export default class Navbar extends Component {
 	render() {
 		return (
 			<div className="page__container invert">
@@ -48,5 +48,3 @@ class Navbar extends Component {
 		);
 	}
 }
-
-export default Navbar;

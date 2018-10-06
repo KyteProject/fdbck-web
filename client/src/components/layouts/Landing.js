@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Login from '../auth/login';
-import Register from '../auth/register';
+import Login from '../auth/Login';
+import Register from '../auth/Register';
 
 const sectionStyle = {
 	backgroundImage: `url(../../assets/img/backgrounds/headphones-large.jpg)`,
@@ -10,7 +10,7 @@ const sectionStyle = {
 	width: '100vw',
 	backgroundPosition: 'left center',
 };
-class Landing extends Component {
+export default class Landing extends Component {
 	render() {
 		return (
 			<div className="page">
@@ -28,5 +28,3 @@ class Landing extends Component {
 		);
 	}
 }
-
-export default Landing;

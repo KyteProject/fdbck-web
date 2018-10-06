@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class Login extends Component {
+export default class Login extends Component {
+	constructor() {
+		super();
+		this.state = {
+			email: '',
+			password: '',
+			errors: {},
+		};
+
+		this.onChange = this.onChange.bind(this);
+		this.onSubmit = this.onSubmit.bind(this);
+	}
+
+	onChange(event) {
+		this.setState({ [event.target.name]: event.target.value });
+	}
+
+	onSubmit(event) {
+		event.preventDefault();
+
+		const loginUser = {
+			email: this.state.email,
+			password: this.state.password,
+		};
+
+		console.log(loginUser);
+	}
+
 	render() {
 		return (
 			<div className="important-container login-container">
@@ -27,13 +54,16 @@ class Login extends Component {
 						The musicians feedback community
 					</p>
 
-					<form action="index.html" method="post" autoComplete="off">
+					<form onSubmit={this.onSubmit}>
 						<div className="form-group">
-							<label>Username</label>
+							<label>Email</label>
 							<input
 								type="text"
 								className="form-control"
-								placeholder="Email or phone"
+								placeholder="Email"
+								autoComplete="email"
+								value={this.state.email}
+								onChange={this.onChange}
 							/>
 						</div>
 						<div className="form-group margin-bottom-20">
@@ -42,7 +72,9 @@ class Login extends Component {
 								type="password"
 								className="form-control"
 								placeholder="Your password"
-								autoComplete="new-password"
+								autoComplete="saved-password"
+								value={this.state.password}
+								onChange={this.onChange}
 							/>
 						</div>
 						<div className="form-group margin-bottom-30">
@@ -52,7 +84,8 @@ class Login extends Component {
 										<input
 											type="checkbox"
 											className="custom-control-input"
-											checked=""
+											checked={true}
+											onChange={this.onChange}
 										/>{' '}
 										<span className="custom-control-label">Remember me</span>
 									</label>
@@ -93,5 +126,3 @@ class Login extends Component {
 		);
 	}
 }
-
-export default Login;
